@@ -38,7 +38,7 @@ export default class Map extends Component {
 			script.async = true;
 			script.defer = true;
 			script.src =
-				'https://maps.googleapis.com/maps/api/js?key=AIzaSyBb0Tt2ZslsgTQtUA675J863O1CPvLnXy8&callback=initMap';
+				'https://maps.googleapis.com/maps/api/js?key=enter_your_key_here&callback=initMap';
 			document.head.appendChild(script);
 			this.initMap();
 		} else {
@@ -58,7 +58,7 @@ export default class Map extends Component {
 				<div id="map" className="contact__map-wrapper" style={{ display: this.state.initDelay }} />
 				<Helmet>
 					{/* <script
-						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb0Tt2ZslsgTQtUA675J863O1CPvLnXy8&callback=initMap"
+						src="https://maps.googleapis.com/maps/api/js?key=enter_your_key_here&callback=initMap"
 						async
 						defer
 					/> */}
