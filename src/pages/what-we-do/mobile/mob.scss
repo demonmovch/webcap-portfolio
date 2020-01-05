@@ -1,0 +1,85 @@
+@import 'inc';
+
+.wwd {
+	&-mobile {
+		background-color: #1b123f;
+
+		h3 {
+			font-weight: 900;
+			font-size: rem(36);
+			line-height: rem(54);
+			letter-spacing: 0.1em;
+			color: #ffffff;
+		}
+
+		&__platform {
+			padding-top: rem(90);
+			position: relative;
+			@include flex(row, space-between);
+
+			figure {
+				position: absolute;
+				width: 1169px;
+				height: 800px;
+				left: 0;
+				top: rem(50);
+				transform: skew(0, -20deg);
+				background: linear-gradient(68.59deg, #df519d 3.71%, rgba(66, 87, 167, 0) 86.63%);
+			}
+
+			&-os {
+				width: 50%;
+
+				.wwd-webdev__app-item {
+					width: 100%;
+				}
+			}
+		}
+
+		&__magic {
+			color: #ffffff;
+			flex-wrap: wrap;
+			@include flex(row, space-between);
+
+			h3 {
+				margin-bottom: rem(35);
+				width: 100%;
+			}
+
+			&--left {
+				width: 35%;
+			}
+
+			&--right {
+				width: 65%;
+			}
+
+			&-item {
+				background-color: $c-rose;
+				margin-bottom: rem(20);
+				padding: 2px;
+
+				&__wrapper {
+					padding: rem(25) rem(35) rem(35) rem(30);
+					background-color: #1b123f;
+				}
+
+				h4 {
+					font-weight: 600;
+					font-size: rem(24);
+					margin-bottom: rem(17);
+				}
+
+				p {
+					font-size: rem(14);
+					line-height: rem(26);
+				}
+			}
+		}
+	}
+
+	&-webdev {
+		&__app {
+		}
+	}
+}

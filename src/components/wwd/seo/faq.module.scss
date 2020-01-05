@@ -1,0 +1,76 @@
+@import 'inc';
+
+
+.question, .answer{
+	color: #fff; 
+}
+
+.question{
+	background: #35206F;
+	cursor: pointer;
+	padding: rem(19) rem(15) rem(19) rem(60);
+	font-size: rem(18);
+	font-weight: 600;
+	position: relative;
+
+  @include media(sm) {
+    font-size: rem(16);
+    padding-right: rem(5);
+  }
+
+	&::after, &::before{
+		content: '';
+		background: #DF519D;
+		position: absolute;
+		transition: transform 0.3s, background 0.3s;
+	}
+
+	&::before{		
+		height: rem(25);
+		width: rem(2);		
+		top: 50%;
+		left: rem(29);
+		transform: translateY(-50%);
+	}
+
+	&.open::before{
+		transform: translateY(-50%) rotate(-45deg);
+		background: #29155F;
+	}
+
+	&::after{
+		height: rem(2);
+		width: rem(25);
+		top: 50%;
+		left: rem(30);
+		transform: translate(-50%,-50%);
+	}
+
+	&.open::after{
+		transform: translate(-50%,-50%) rotate(-45deg);
+		background: #29155F;
+	}
+}
+
+.answer{
+	background: #20114A;
+	box-sizing: border-box; 
+	padding: 0 60px;
+	transition: height 0.7s cubic-bezier(.4, 0, .2, 1);
+	font-size: 14px;
+	line-height: 1.8;
+	padding: 19px 60px;
+}
+
+.question.open{
+	color: #DF519D;
+}
+
+.faqItem{
+	margin-bottom: rem(5);
+}
+
+.wrapper {
+  height: 0;
+  overflow: hidden;
+}

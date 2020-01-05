@@ -1,0 +1,143 @@
+@import 'inc';
+
+.hasFooter {
+  padding-bottom: rem(380) !important;
+
+  @include media(lg) {
+    padding-bottom: rem(500) !important;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(#000000, 0.3);
+  color: #ffffff;
+
+  &-col {
+    @include media(sm) {
+      width: 50%;
+      margin-bottom: rem(30);
+
+      h4 {
+        display: none;
+      }
+    }
+  }
+
+  &-social {
+    ul {
+      @include flex(row, flex-start);
+
+      li {
+        &:not(:last-child) {
+          margin-right: rem(16);
+        }
+
+        a {
+          background-color: rgba(#ffffff, 1);
+          width: rem(53);
+          height: rem(53);
+          transition: background-color 0.2s linear;
+          @include flex;
+
+          &:hover {
+            background-color: rgba($c-rose, 1);
+          }
+        }
+      }
+    }
+  }
+
+  &-top {
+    border-top: 1px solid rgba(#ffffff, 0.15);
+    padding: rem(40) rem(65) rem(30);
+    @include flex(row, space-between, center);
+
+    @include media(lg) {
+      flex-wrap: wrap;
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: rem(20);
+    }
+
+    nav {
+      width: 50%;
+      @include flex(row, space-between, flex-end);
+
+      @include media(lg) {
+        width: 100%;
+        margin: rem(30) 0;
+      }
+
+      @include media(sm) {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+      }
+
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: rem(9);
+          }
+
+          a {
+            color: rgba(#ffffff, 1);
+            font-size: 12px;
+            transition: color 0.2s linear;
+            line-height: rem(22);
+
+            &:hover {
+              color: rgba($c-rose, 1);
+            }
+          }
+        }
+      }
+    }
+
+    a {
+      img {
+        max-width: rem(243.55);
+      }
+    }
+  }
+
+  &-bt {
+    border-top: 1px solid rgba(#ffffff, 0.15);
+    padding: rem(8) rem(20);
+    @include flex(row, space-between);
+
+    &__links {
+      @include media(sm) {
+        width: 50%;
+      }
+      a {
+        color: rgba(#ffffff, 0.5);
+        font-size: rem(12);
+        display: inline-block;
+        margin-right: rem(45);
+        transition: color 0.2s linear;
+
+        &:hover {
+          color: rgba($c-rose, 1);
+        }
+      }
+    }
+
+    p {
+      color: rgba(#ffffff, 0.5);
+      font-size: rem(12);
+      font-weight: 300;
+
+      @include media(sm) {
+        white-space: nowrap;
+      }
+    }
+  }
+}

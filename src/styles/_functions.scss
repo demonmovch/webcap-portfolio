@@ -1,0 +1,7 @@
+@function scut-strip-unit ($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+@function rem ($pixels) {
+	@return scut-strip-unit($pixels) / $f-size * 1rem;
+}

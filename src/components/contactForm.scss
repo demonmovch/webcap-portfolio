@@ -1,0 +1,110 @@
+@import 'inc';
+
+.contact-form {
+	margin: 0 auto;
+	width: 100%;
+	max-width: rem(768);
+	color: #ffffff;
+
+	h3,
+	h4 {
+		text-align: center;
+	}
+
+	h3 {
+		font-size: rem(36);
+		font-weight: 900;
+		margin-bottom: rem(20);
+		letter-spacing: 0.2rem;
+	}
+
+	h4 {
+		font-size: rem(18);
+	}
+
+	form {
+		flex-wrap: wrap;
+		padding: rem(70) 0;
+		@include flex(row, space-between);
+
+		button {
+			margin: 0 auto;
+			width: rem(333);
+			z-index: 1;
+		}
+	}
+
+	&__input {
+		position: relative;
+		margin-bottom: rem(80);
+
+		span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: rem(18);
+			font-weight: 600;
+			transition: all .2s linear;
+		}
+
+		input {
+			border-bottom: rem(2) solid $c-blue;
+			width: 100%;
+			height: rem(25);
+			position: relative;
+			z-index: 1;
+
+			&.notEmpty {
+				+ span {
+					transform: translate(-10%, -120%) scale(0.8);
+					opacity: .5;
+				}
+			}
+
+			&:required {
+				box-shadow: none;
+			}
+
+			&:focus {
+				+ span {
+					transform: translate(-10%, -120%) scale(0.8);
+					opacity: .5;
+				}
+			}
+
+			&:required:valid {
+				+ span {
+					transform: translate(-10%, -120%) scale(0.8);
+					opacity: .5;
+				}
+			}
+		}
+
+		&.short {
+			width: calc(50% - #{rem(15)});
+
+			@include media(sm) {
+				width: 100%;
+			}
+		}
+
+		&.long {
+			width: 100%;
+		}
+	}
+
+	&__message {
+		padding-top: rem(20);
+		font-size: rem(14);
+		width: 100%;
+		text-align: center;
+
+		.success {
+			color: rgb(205, 248, 141);
+		}
+
+		.error {
+			color: rgb(253, 94, 142);
+		}
+	}
+}

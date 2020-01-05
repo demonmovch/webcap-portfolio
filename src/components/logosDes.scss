@@ -1,0 +1,51 @@
+@import 'inc';
+
+.logos-des {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+        margin: 0 rem(25);
+        opacity: .35;
+        width: 18%;
+
+        @include media(sm) {
+            width: 28%;
+        }
+    }
+
+    .up {
+        margin-left: rem(-125);
+        margin-bottom: rem(40);
+
+        @include media(sm) {
+            margin-left: rem(-30);
+            margin-bottom: rem(20);
+        }
+
+        img {
+            @include media(sm) {
+                &:nth-child(3) {
+                    display: none;
+                }
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .down {
+        img {
+            @include media(sm) {
+                &:nth-child(3) {
+                    display: none;
+                }
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

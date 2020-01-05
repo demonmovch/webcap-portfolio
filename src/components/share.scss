@@ -1,0 +1,53 @@
+@import 'inc';
+
+.share {
+	@include flex(row, flex-start);
+
+	@include media(sm) {
+		justify-content: space-between;
+	}
+
+	h3 {
+		color: #ffffff;
+		@include text(36, 900);
+
+		@include media(sm) {
+			font-size: rem(24);
+		}
+
+		span {
+			margin: rem(15);
+
+			@include media(sm) {
+				margin: rem(7.5);
+			}
+		}
+	}
+
+	ul {
+		margin-left: rem(10);
+		@include flex;
+
+		li {
+			height: rem(50);
+			width: rem(50);
+			background-color: #ffffff;
+			cursor: pointer;
+			transition: transform .1s linear;
+			@include flex;
+
+			@include media(sm) {
+				height: rem(35);
+				width: rem(35);
+			}
+
+			&:not(:last-child) {
+				margin-right: rem(15);
+			}
+
+			&:hover {
+				transform: scale(1.1) translate(0, #{rem(-5)});
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+@import 'inc';
+
+.assembly {
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+		transform: translateY(-100%);
+		opacity: 0;
+		transition: transform .8s cubic-bezier(1, .08, .37, 1.38), opacity .8s cubic-bezier(1, .08, .37, 1.38);
+
+		&.show {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+}

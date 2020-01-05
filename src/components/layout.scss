@@ -1,0 +1,52 @@
+@import 'core';
+
+.layout {
+	position: relative;
+}
+
+.cookie {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	min-height: rem(76);
+	width: 100%;
+	z-index: 5;
+	color: #ffffff;
+	padding: 0 rem(46);
+	background-color: #444382;
+	transition: opacity .3s linear;
+	@include flex(row, space-between);
+
+	@include media(sm) {
+		flex-wrap: wrap;
+		padding: rem(10) rem(46);
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+	p,
+	a {
+		font-weight: 500;
+		font-size: rem(14);
+		letter-spacing: 0.1em;
+	}
+
+	p {
+		@include media(sm) {
+			width: 100%;
+			padding-bottom: rem(10);
+		}
+	}
+
+	button {
+		background-color: #df519d;
+		box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.35);
+		padding: rem(12) rem(38);
+
+		@include media(sm) {
+			width: 100%;
+		}
+	}
+}

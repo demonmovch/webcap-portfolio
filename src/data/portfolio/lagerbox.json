@@ -1,0 +1,20 @@
+{
+  "slug": "lagerbox",
+  "title": "Lagerbox",
+  "subtitle": "Calculating storage costs. How much does LAGERBOX cost me?",
+  "color_theme": "#24242E",
+  "text": {
+    "about": "SHcreative is a company that's focused on filming. From scriptwriting to post production - all the services are located in the portfolio sections that show multiple video content created by SHcreative.",
+    "technologies": "Website development: Wordpress, PHP, HTML, CSS, JS (jQuery)",
+    "list": [
+      "Responsive view",
+      "Hubspot integration",
+      "Background video frame",
+      "Animated site elements",
+      "Email subscription",
+      "Custom WP theme",
+      "WP plugin customization",
+      "Payment system integration"
+    ]
+  }
+}

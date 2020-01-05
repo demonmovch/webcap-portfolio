@@ -1,0 +1,217 @@
+@import 'inc';
+
+.wwd {
+  position: relative;
+  background-color: #280e3c;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: rem(110);
+  @include flex;
+
+  @include media(sm) {
+    padding-top: rem(100);
+  }
+
+  &-wrapper {
+    flex-wrap: wrap;
+    @include flex;
+  }
+
+  &__item {
+    width: calc(33.333% - #{rem(60)});
+    position: relative;
+    padding-top: 18.6%;
+    background-color: #4257a7;
+    overflow: hidden;
+    transition: margin 0.3s linear;
+
+    @include media(lg) {
+      width: calc(50% - #{rem(60)});
+      padding-top: 28.6%;
+    }
+
+    @include media(sm) {
+      width: calc(50% - #{rem(30)});
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      width: 80%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: skew(0, -20deg) translate(-100%);
+      transition: transform 0.5s cubic-bezier(1, 0, 0.33, 0.94);
+      background: linear-gradient(67.31deg, #df519d 9.87%, transparent 91.57%);
+    }
+
+    &:hover {
+      &:before {
+        transform: skew(0, -20deg) translate(0);
+      }
+
+      h2 {
+        padding: 15px 10px;
+        text-shadow: 0 0 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+      }
+    }
+
+    &._init {
+      box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.35);
+      margin: rem(30);
+
+      @include media(sm) {
+        margin: rem(15);
+      }
+    }
+
+    &-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      @include flex;
+
+      h2 {
+        color: #ffffff;
+        font-size: rem(36);
+        font-weight: 900;
+        text-align: center;
+
+        @include media(sm) {
+          font-size: rem(20);
+        }
+      }
+    }
+  }
+
+  &-page {
+    padding-top: rem(200);
+    padding-bottom: rem(250);
+    overflow: hidden;
+
+    @include media(sm) {
+      padding-bottom: rem(300);
+    }
+
+    &__title {
+      border-bottom: 1.5px dotted rgba(#ffffff, 0.2);
+      @include flex(row, flex-start, flex-start);
+
+      a {
+        height: auto;
+        margin-right: rem(70);
+        margin-top: rem(60);
+
+        @include media(sm) {
+          margin-top: rem(7.5);
+          margin-right: rem(30);
+        }
+      }
+
+      h1 {
+        font-weight: 900;
+        color: #ffffff;
+        font-size: rem(130);
+        padding-bottom: rem(26);
+        @include flex(row, flex-start);
+
+        @include media(lg) {
+          font-size: rem(80);
+        }
+
+        @include media(sm) {
+          font-size: rem(36);
+          padding-bottom: rem(35);
+        }
+      }
+    }
+
+    h2 {
+      font-weight: 900;
+      font-size: rem(36);
+      color: #ffffff;
+      letter-spacing: 0.22rem;
+    }
+
+    &__top {
+      padding-top: rem(40);
+      position: relative;
+      z-index: 1000;
+      @include flex(row, space-between, flex-start);
+
+      @include media(xl) {
+        flex-wrap: wrap;
+      }
+
+      @include media(lg) {
+        width: 100%;
+      }
+
+      p {
+        max-width: rem(569);
+        color: #ffffff;
+        line-height: rem(33);
+
+        @include media(md) {
+          padding-bottom: rem(20);
+        }
+
+        @include media(sm) {
+          width: 80%;
+        }
+      }
+
+      a {
+        @include media(sm) {
+          width: 100%;
+        }
+      }
+    }
+
+    &__enjoy {
+      position: relative;
+      text-align: center;
+      padding: rem(150) 0 rem(70);
+      @include flex(column);
+
+      @include media(md) {
+        padding-top: rem(50);
+        padding-bottom: rem(200);
+      }
+
+      .logos-des {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      strong {
+        font-weight: 900;
+        font-size: rem(130);
+        line-height: rem(158);
+        position: relative;
+        color: #bd71bf;
+        white-space: nowrap;
+        letter-spacing: 0.1em;
+        margin-bottom: rem(40);
+
+        @include media(md) {
+          font-size: rem(100);
+        }
+
+        @include media(sm) {
+          font-size: rem(36);
+          line-height: rem(44);
+        }
+      }
+
+      a {
+        position: relative;
+      }
+    }
+  }
+}

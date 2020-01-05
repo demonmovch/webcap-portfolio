@@ -1,0 +1,20 @@
+{
+	"slug": "pp",
+	"title": "Pompeii Pizza",
+	"subtitle": "Pompeii Pizza Marketing Website",
+	"color_theme": "#242424",
+	"text": {
+		"about": "Pompeii is a marketing website for clinical photography software. It contains all the information ",
+		"technologies": "Innovative form of communication between doctor and patient, secure and easy manageable cloud photobase, admin panel for photo customization with injection tracking tool, before and after tracking system and many more. Innovative form of communication between doctor and patient, secure and easy manageable cloud photobase, admin panel for photo customization with injection tracking tool, before and after tracking system and many more.",
+		"list": [
+			"Responsive view",
+			"Hubspot integration",
+			"Background video frame",
+			"Animated site elements",
+			"Email subscription",
+			"Custom WP theme",
+			"WP plugin customization",
+			"Payment system integration"
+		]
+	}
+}

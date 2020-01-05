@@ -1,0 +1,20 @@
+{
+	"slug": "squaducation",
+	"title": "Squaducation",
+	"subtitle": "Squaducation",
+	"color_theme": "#24242E",
+	"text": {
+		"about": "Squaducation is the online-films platform, selling access to the library of history films hosted on Vimeo service.",
+		"technologies": "Key features: Paypal payment module, discount voucher logic, subscription functionality with MailChimp integration. Main technologies : CMS Drupal 7, PHP, HTML, CSS",
+		"list": [
+			"Responsive view",
+			"Hubspot integration",
+			"Background video frame",
+			"Animated site elements",
+			"Email subscription",
+			"Custom WP theme",
+			"WP plugin customization",
+			"Payment system integration"
+		]
+	}
+}

@@ -1,0 +1,266 @@
+@import 'inc';
+
+.portfolio {
+  &__item {
+    padding-top: 6.25rem;
+    width: 100%;
+    overflow: hidden;
+
+    &-back {
+      position: absolute;
+      top: calc(#{rem(130)} / 2);
+      left: rem(-60);
+      display: block;
+
+      svg {
+        &:hover {
+          path {
+            fill: $c-rose;
+          }
+        }
+      }
+    }
+
+    .contact-form {
+      @include media(lg) {
+        padding: 0 20px;
+      }
+    }
+
+    &-bglogo {
+      position: absolute;
+      right: 0;
+      top: rem(250);
+    }
+
+    &-top {
+      margin-bottom: rem(95);
+      position: relative;
+      @include flex(row, space-between);
+
+      @include media(sm) {
+        flex-direction: column;
+      }
+
+      .portfolio__item-back {
+        @include media(sm) {
+          display: none;
+        }
+      }
+
+      h1 {
+        font-weight: 900;
+        font-size: rem(130);
+        color: #ffffff;
+        position: relative;
+        text-align: center;
+
+        @include media(lg) {
+          font-size: rem(90);
+        }
+
+        @include media(sm) {
+          font-size: rem(50);
+        }
+
+        .portfolio__item-back {
+          @include media(sm) {
+            display: none;
+          }
+        }
+      }
+
+      h3 {
+        font-weight: 700;
+        font-size: rem(36);
+        color: #6887ff;
+
+        @include media(lg) {
+          font-size: rem(30);
+        }
+
+        @include media(sm) {
+          font-size: rem(20);
+          padding: rem(45) 0;
+          @include flex;
+        }
+
+        .portfolio__item-back {
+          display: none;
+
+          @include media(sm) {
+            display: block;
+            position: static;
+            margin-right: rem(20);
+
+            svg {
+              height: rem(42);
+              width: rem(38);
+              path {
+                fill: #df519d;
+              }
+            }
+          }
+        }
+      }
+
+      &__logo {
+        width: rem(160);
+        height: rem(160);
+        position: relative;
+        flex-shrink: 0;
+
+        @include media(sm) {
+          order: -1;
+          margin: rem(55) 0;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &-banner {
+      width: calc(100% - ((100% - 1110px) / 2));
+
+      @include media(xl) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-desc {
+      color: #ffffff;
+      margin-top: rem(130);
+      flex-wrap: wrap;
+      @include flex(row, space-between, flex-start);
+
+      &__text {
+        width: 50%;
+
+        @include media(md) {
+          width: 100%;
+        }
+
+        h3 {
+          font-weight: 900;
+          font-size: rem(36);
+          margin-bottom: rem(25);
+        }
+
+        p {
+          line-height: 2rem;
+          font-size: rem(18);
+          margin-bottom: rem(65);
+        }
+      }
+
+      .list {
+        padding-top: rem(60);
+        width: 40%;
+
+        @include media(md) {
+          width: 100%;
+          padding-top: 0;
+        }
+      }
+    }
+
+    &-main {
+      position: relative;
+
+      @include media(sm) {
+        margin-top: 0;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-bt {
+      @include flex(row, space-between);
+
+      @include media(sm) {
+        flex-direction: column;
+      }
+
+      .portfolio__item-nextpj {
+        @include media(sm) {
+          order: -1;
+          padding: rem(35) 0;
+        }
+      }
+    }
+
+    &-enjoy {
+      padding: rem(85) 0;
+      margin-top: rem(70);
+      margin-bottom: rem(130);
+      position: relative;
+
+      @include media(lg) {
+        margin: rem(50) 0;
+        padding: rem(50) 0;
+      }
+
+      h1 {
+        color: $c-blue;
+        font-size: rem(130);
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 1rem;
+        position: relative;
+        @include flex(column);
+
+        @include media(lg) {
+          font-size: rem(90);
+        }
+
+        @include media(sm) {
+          letter-spacing: 0.5rem;
+          font-size: rem(60);
+        }
+      }
+    }
+
+    &-nextpj {
+      font-size: rem(36);
+      font-weight: 900;
+      color: rgba(#ffffff, 9999);
+      transition: color 0.1s ease-in;
+
+      &:hover {
+        color: rgba($c-rose, 99999);
+
+        svg {
+          path {
+            fill: rgba($c-rose, 99999);
+          }
+        }
+      }
+
+      svg {
+        margin-left: rem(25);
+        transform: rotate(180deg);
+
+        path {
+          transition: fill 0.1s ease-in;
+        }
+      }
+    }
+
+    .container_wide {
+      max-width: 1470px;
+    }
+  }
+}

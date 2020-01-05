@@ -1,0 +1,18 @@
+{
+	"slug": "shcreative",
+	"title": "SHCreative",
+	"subtitle": "Website A Creative film & video production company",
+	"color_theme": "#070707",
+	"text": {
+		"about": "SHcreative is a company that's focused on filming. From scriptwriting to post production - all the services are located in the portfolio sections that show multiple video content created by SHcreative.",
+		"technologies": "Website development: Wordpress, PHP, HTML, CSS, JS (jQuery)",
+		"list": [
+			"AJAX menu",
+			"Social networking",
+			"Responsive view",
+			"Integrated Adobe Edge animation reel",
+			"Multiple video blocks",
+			"Сrew member's portfolio can be reviewed in video form"
+		]
+	}
+}

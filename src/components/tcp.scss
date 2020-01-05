@@ -1,0 +1,83 @@
+@import 'inc';
+
+.tcp {
+	padding-top: rem(200);
+	padding-bottom: rem(100);
+	color: #ffffff;
+	position: relative;
+	overflow: hidden;
+
+	> img {
+		position: absolute;
+	}
+
+	&-top {
+		top: 0;
+		right: 0;
+	}
+
+	&-bottom {
+		bottom: -10%;
+		left: 0;
+	}
+
+	h1 {
+		text-align: center;
+		width: 100%;
+		margin-bottom: rem(60);
+		font-size: rem(36);
+		font-weight: 700;
+		position: relative;
+	}
+
+	.container {
+		flex-wrap: wrap;
+		@include flex(row, space-between, flex-start);
+
+		h3 {
+			font-size: rem(24);
+			font-weight: 600;
+			margin-bottom: rem(20);
+		}
+
+		> div {
+			position: relative;
+			width: calc(50% - #{rem(12.5)});
+			padding-bottom: rem(20);
+
+			@include media(md) {
+				width: 100%;
+			}
+
+			&.w100 {
+				width: 100%;
+			}
+
+			.list {
+				margin-top: rem(-20);
+				padding-left: rem(40);
+
+				li {
+					font-size: rem(14);
+					font-weight: 400;
+				}
+			}
+		}
+
+		p {
+			padding-left: rem(40);
+			font-size: rem(14);
+			line-height: 1.5rem;
+			padding-bottom: rem(40);
+		}
+	}
+
+	&-connect {
+		position: relative;
+		margin: 0 auto;
+		margin-top: rem(120);
+		max-width: rem(400);
+		width: 100%;
+		@include flex(column);
+	}
+}

@@ -1,0 +1,63 @@
+@mixin flex($direction: row, $content: center, $items: center) {
+	display: flex;
+	align-items: $items;
+	justify-content: $content;
+	flex-direction: $direction;
+}
+
+@mixin text($size, $weight: null, $lineHeight: null, $letter-spacing: null) {
+	font-size: rem($size);
+
+	@if $weight !=null {
+		font-weight: $weight;
+	}
+
+	@if $lineHeight != null {
+		line-height: $lineHeight;
+	}
+
+	@if $letter-spacing != null {
+		letter-spacing: $letter-spacing;
+	}
+}
+
+// custom media
+$media-types: (
+	xs: '(max-width: 320px)',
+	sm: '(max-width: 576px)',
+	md: '(max-width: 830px)',
+	lg: '(max-width: 992px)',
+	xl: '(max-width: 1200px)',
+	hd: '(max-width: 1366px)',
+	rwd: '(max-width: 1440px)',
+	fhd: '(max-width: 1920px)'
+);
+
+@mixin media($media) {
+	@if not map-contains($media-types, $media) {
+		@warn "#{$media} is not a known media type.";
+		$media: large-desktop;
+	}
+
+	@media #{map-get($media-types, $media)} {
+		@content;
+	}
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
