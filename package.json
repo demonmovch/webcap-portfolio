@@ -17,7 +17,7 @@
 		"gatsby-source-filesystem": "^2.0.23",
 		"gatsby-transformer-json": "^2.1.8",
 		"gatsby-transformer-sharp": "^2.1.17",
-		"gsap": "^2.0.2",
+		"gsap": "^3.6.0",
 		"history": "^4.7.2",
 		"node-sass": "^4.11.0",
 		"prop-types": "^15.6.2",
